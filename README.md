@@ -50,10 +50,10 @@ Rotating the potentiometer smoothly changes the servo angle from **0° to 180°*
 
 ## 🖥 Output Example (Serial Monitor)
 
-ESP8266 Servo Control with Potentiometer
-Potentiometer value: 134 | Angle: 24
-Potentiometer value: 560 | Angle: 98
-Potentiometer value: 900 | Angle: 158
+- ESP8266 Servo Control with Potentiometer
+- Potentiometer value: 134 | Angle: 24
+- Potentiometer value: 560 | Angle: 98
+- Potentiometer value: 900 | Angle: 158
 
 ---
 
