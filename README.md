@@ -1,62 +1,51 @@
-This project demonstrates how to control a servo motor using a potentiometer connected to an ESP8266 development board (such as NodeMCU or Wemos D1 Mini). As the potentiometer is turned, the servo angle changes accordingly from 0° to 180°.
+# ESP8266 Servo Motor Control Using Potentiometer
 
- Overview
-A servo motor is connected to a digital pin (D4).
+This project demonstrates how to control a **servo motor** using a **potentiometer** with an **ESP8266 development board** (NodeMCU or Wemos D1 Mini).  
+Rotating the potentiometer smoothly changes the servo angle from **0° to 180°** in real time.
 
-A potentiometer is connected to analog pin (A0).
+---
 
-The ESP8266 reads analog values from the potentiometer and maps them to servo angles.
+## 📌 Overview
 
-Real-time values are also printed on the Serial Monitor for debugging.
+- A servo motor is controlled via a digital GPIO pin.
+- A potentiometer provides analog input to set the servo position.
+- The ESP8266 reads the potentiometer value, maps it to an angle, and updates the servo accordingly.
+- Live readings are displayed on the Serial Monitor for debugging and observation.
 
- Hardware Required
-ESP8266 (NodeMCU / Wemos D1 Mini)
+---
 
-Servo motor (e.g., SG90)
+## 🛠 Hardware Required
 
-Potentiometer (10kΩ recommended)
+- ESP8266 (NodeMCU / Wemos D1 Mini)
+- Servo Motor (e.g., SG90)
+- Potentiometer (10kΩ recommended)
+- Breadboard
+- Jumper Wires
+- USB Cable (for programming)
 
-Jumper wires
+---
 
-Breadboard
+## 🔌 Circuit Connections
 
-USB cable for programming
+| Component | ESP8266 Pin |
+|---------|------------|
+| Servo Signal | D4 (GPIO2) |
+| Servo VCC | 3V3 |
+| Servo GND | GND |
+| Potentiometer VCC | 3V3 |
+| Potentiometer GND | GND |
+| Potentiometer Output | A0 |
 
- Circuit Connections
-Component	ESP8266 Pin
-Servo Signal	D4 (GPIO2)
-Servo VCC	3V3
-Servo GND	GND
-Potentiometer VCC	3V3
-Potentiometer GND	GND
-Potentiometer Output	A0
+---
 
- How It Works
-The ESP8266 reads the analog input from the potentiometer (range: 0–1023).
+## ⚙️ How It Works
 
-It maps this value to a range suitable for servo rotation (0–180 degrees).
+1. The ESP8266 reads the analog input from the potentiometer (range: 0–1023).
+2. The value is mapped to a servo angle between 0° and 180°.
+3. The mapped angle is sent to the servo motor using the Servo library.
+4. The servo position updates instantly as the potentiometer is rotated.
+5. Values are printed on the Serial Monitor at 115200 baud.
 
-It sends this angle to the servo motor using the Servo library.
+---
 
-The position is updated in real-time as the potentiometer is rotated.
-
-Values are displayed in the Serial Monitor at 115200 baud.
-
- Notes
-Ensure your servo motor does not draw more current than the ESP8266 can supply. For higher-torque servos, consider an external power source.
-
-You may need to install the ESP8266 board support in the Arduino IDE if not already done.
-
- Output Example (Serial Monitor)
-yaml
-Copy
-Edit
-ESP8266 Servo Control with Potentiometer
-Potentiometer value: 134 | Angle: 24
-Potentiometer value: 560 | Angle: 98
-Potentiometer value: 900 | Angle: 158
- Libraries Used
-Servo.h
-
- License
-This project is open-source and free to use under the MIT License.
+## 🖥 Output Example (Serial Monitor)
