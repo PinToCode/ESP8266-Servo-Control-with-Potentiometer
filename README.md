@@ -49,3 +49,36 @@ Rotating the potentiometer smoothly changes the servo angle from **0° to 180°*
 ---
 
 ## 🖥 Output Example (Serial Monitor)
+
+ESP8266 Servo Control with Potentiometer
+Potentiometer value: 134 | Angle: 24
+Potentiometer value: 560 | Angle: 98
+Potentiometer value: 900 | Angle: 158
+
+---
+
+## 📚 Libraries Used
+
+- Servo.h
+
+---
+
+## ⚠️ Notes
+
+- Ensure the servo motor does not draw more current than the ESP8266 can supply.
+- For high-torque servos, use an external power supply and connect grounds together.
+- Install ESP8266 board support in the Arduino IDE if not already installed.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.  
+You are free to use, modify, and distribute this project.
+
+---
+
+## 👤 Author
+
+**Jerit Jose**  
+Embedded Systems & IoT Developer
